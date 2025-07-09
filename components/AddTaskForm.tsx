@@ -24,7 +24,6 @@ const AddTaskForm = ({ onSubmit, onCancel }: {
       address
     });
     
-    // Сброс формы
     setTitle('');
     setDescription('');
     setAddress('');
@@ -36,7 +35,6 @@ const AddTaskForm = ({ onSubmit, onCancel }: {
     if (Platform.OS === 'ios') {
       setShowDatePicker(true);
     } else {
-      // Для Android показываем пикер как модальное окно
       setShowDatePicker(true);
     }
   };

@@ -16,7 +16,6 @@ export default function HomeScreen() {
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [sortBy, setSortBy] = useState<'date' | 'status'>('date');
   
-  // Состояние для фильтрации по статусам
   const [selectedStatuses, setSelectedStatuses] = useState<TaskStatus[]>([
     'Not Started', 
     'In Progress', 
@@ -24,12 +23,11 @@ export default function HomeScreen() {
     'Cancelled'
   ]);
 
-  // Фильтрация задач по выбранным статусам
+
   const filteredTasks = tasks.filter(task => 
     selectedStatuses.includes(task.status)
   );
 
-  // Сортировка задач
   const sortedTasks = [...filteredTasks].sort((a, b) => {
     if (sortBy === 'date') {
       return b.createdAt.getTime() - a.createdAt.getTime();
@@ -44,7 +42,6 @@ export default function HomeScreen() {
     }
   });
 
-  // Проверка если все статусы отключены
   useEffect(() => {
     if (selectedStatuses.length === 0) {
       setSelectedStatuses([

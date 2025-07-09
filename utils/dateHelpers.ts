@@ -1,6 +1,6 @@
 import { Task, TaskStatus } from '@/store/types';
 
-// Проверяем, является ли строка допустимым статусом
+
 const isValidStatus = (status: string): status is TaskStatus => {
   return ['Not Started', 'In Progress', 'Completed', 'Cancelled'].includes(status);
 };
@@ -16,7 +16,6 @@ export const serializeTask = (task: Task) => ({
 });
 
 export const deserializeTask = (data: any): Task => {
-  // Проверяем статус, если он не валиден, устанавливаем 'Not Started'
   const status: TaskStatus = isValidStatus(data.status) 
     ? data.status 
     : 'Not Started';

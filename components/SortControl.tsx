@@ -10,7 +10,6 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { TaskStatus } from '@/store/types';
 import { statusColors } from '@/utils/helpers';
 
-// Создаем обертку для Text
 const Text = (props: React.ComponentProps<typeof RNText>) => <RNText {...props} />;
 
 interface SortControlProps {
@@ -136,8 +135,6 @@ const styles = StyleSheet.create({
   },
   activeSortButton: {
     backgroundColor: '#FFEE58', 
-    // borderWidth: 1,
-    // borderColor: '#FBC02D', 
   },
   buttonText: {
     fontSize: 14,
