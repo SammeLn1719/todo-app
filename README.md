@@ -17,8 +17,9 @@ Installation and Launch
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/taskflow.git
-cd taskflow
+git clone https://github.com/SammeLn1719/todo-app.git
+
+cd todo-app
 Install dependencies:
 
 bash
